@@ -21,23 +21,23 @@ A full-stack web application for exploring celestial bodies in our Solar System.
 - [Contributing](#contributing)
 - [License](#license)
 
-## ✨ Features
+Features
 
 ### Public Features
-- 🌍 Browse 30+ celestial bodies (planets, moons, asteroids, dwarf planets, comets)
-- 🔍 Search and filter by type
-- 📱 Responsive design for all devices
-- 🖼️ High-quality NASA images for each celestial body
-- 📖 Detailed information pages with fun facts
-- 🎨 Modern, beautiful UI with smooth animations
+-  Browse 30+ celestial bodies (planets, moons, asteroids, dwarf planets, comets)
+-  Search and filter by type
+-  Responsive design for all devices
+-  High-quality NASA images for each celestial body
+-  Detailed information pages with fun facts
+-  Modern, beautiful UI with smooth animations
 
 ### Admin Features
-- 🔐 Secure authentication with JWT
-- ➕ Create new celestial bodies
-- ✏️ Edit existing entries
-- 🗑️ Delete celestial bodies
-- 🖼️ Manage images via URLs
-- 📊 Full CRUD operations
+-  Secure authentication with JWT
+-  Create new celestial bodies
+-  Edit existing entries
+-  Delete celestial bodies
+-  Manage images via URLs
+-  Full CRUD operations
 
 ## 🛠️ Tech Stack
 
@@ -58,7 +58,7 @@ A full-stack web application for exploring celestial bodies in our Solar System.
 - **Morgan** - Logging
 - **Express Rate Limit** - Rate limiting
 
-## 📦 Prerequisites
+Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -90,7 +90,7 @@ npm install
 cd ..
 ```
 
-## ⚙️ Configuration
+Configuration
 
 ### 1. Create Environment File
 
@@ -124,7 +124,7 @@ ADMIN_PASSWORD=your_secure_password
 - Change `JWT_SECRET` to a strong random string
 - Update admin credentials for production
 
-## 🏃 Running the Application
+Running the Application
 
 ### Development Mode
 
@@ -155,7 +155,7 @@ npm run build
 npm run preview
 ```
 
-## 🌱 Database Seeding
+Database Seeding
 
 ### Seed Celestial Bodies Data
 
@@ -178,14 +178,14 @@ This will populate your database with:
 npm run seed:admin
 ```
 
-## 🔐 Admin Access
+Admin Access
 
 ### Admin Credentials
 Use the credentials you configured in your `.env` file:
 - **Username**: Value of `ADMIN_USERNAME` in `.env`
 - **Password**: Value of `ADMIN_PASSWORD` in `.env`
 
-**⚠️ Important**: Never commit your `.env` file to version control!
+Important**: Never commit your `.env` file to version control!
 
 ### Admin Panel
 Access the admin panel at: `http://localhost:5173/login`
@@ -197,7 +197,7 @@ Access the admin panel at: `http://localhost:5173/login`
 - Manage images
 - All fields are validated
 
-## 📁 Project Structure
+Project Structure
 
 ```
 Space-Atlas-backend-codes/
@@ -299,23 +299,22 @@ Response: {
   user: { username, role }
 }
 ```
+Screenshots
 
-## 📸 Screenshots
-
-### Home Page
+Home Page
 Browse all celestial bodies with beautiful images and filtering options.
 
-### Detail Page
+Detail Page
 View comprehensive information about each celestial body including:
 - High-quality NASA images
 - Detailed descriptions
 - Discovery information
 - Fun facts
 
-### Admin Panel
+Admin Panel
 Secure admin interface for managing celestial bodies.
 
-## 🔒 Security Features
+Security Features
 
 - **JWT Authentication** - Secure token-based auth
 - **Password Hashing** - Bcrypt with salt rounds
@@ -325,7 +324,7 @@ Secure admin interface for managing celestial bodies.
 - **CORS** - Configured for security
 - **Input Validation** - All inputs validated
 
-## 🌐 Environment Variables
+Environment Variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
@@ -335,7 +334,7 @@ Secure admin interface for managing celestial bodies.
 | `ADMIN_USERNAME` | Admin username | Yes |
 | `ADMIN_PASSWORD` | Admin password | Yes |
 
-## 🐛 Troubleshooting
+Troubleshooting
 
 ### MongoDB Connection Issues
 - Verify your MongoDB URI is correct
@@ -351,16 +350,16 @@ npx kill-port 5000
 PORT=5001
 ```
 
-### Frontend Not Loading
+Frontend Not Loading
 - Clear browser cache
 - Check if backend is running
 - Verify CORS settings
 
-## 📝 License
+License
 
 This project is licensed under the ISC License.
 
-## 👥 Contributing
+Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -370,16 +369,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📧 Contact
+Contact
 
 For questions or support, please open an issue in the repository.
 
-## 🙏 Acknowledgments
+Acknowledgments
 
 - NASA for providing public domain images
 - MongoDB Atlas for database hosting
 - All contributors and users of this project
 
----
 
-**Made with ❤️ for space enthusiasts**
