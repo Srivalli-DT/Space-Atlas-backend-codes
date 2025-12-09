@@ -1,15 +1,55 @@
 const mongoose = require("mongoose");
 
-const bodySchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  type: { 
-    type: String, 
-    enum: ["Planet", "Moon", "Asteroid", "Comet", "Dwarf Planet", "Other"],
-    required: true
+const CelestialSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, "Name is required"],
+    unique: true,
+    trim: true
   },
-  description: { type: String, required: true },
-  discoveryDate: { type: Date },
-  discoveredBy: { type: String }
+  type: {
+    type: String,
+    enum: {
+      values: ["Planet", "Moon", "Asteroid", "Dwarf Planet", "Comet"],
+      message: "{VALUE} is not a valid celestial body type"
+    },
+    required: [true, "Type is required"]
+  },
+  description: {
+    type: String,
+    required: [true, "Description is required"],
+    minlength: [50, "Description must be at least 50 characters (approximately 2 sentences)"],
+    trim: true
+  },
+  imageUrl: {
+    type: String,
+    required: [true, "Image URL is required"],
+    trim: true
+  },
+  discoveredBy: {
+    type: String,
+    required: [true, "Discoverer name is required"],
+    trim: true
+  },
+  discoveryDate: {
+    type: String,
+    required: [true, "Discovery date is required"],
+    trim: true
+  },
+  funFact: {
+    type: String,
+    required: [true, "Fun fact is required"],
+    trim: true
+  }
+}, {
+  versionKey: false,
+  timestamps: false
 });
 
-module.exports = mongoose.model("CelestialBody", bodySchema);
+// Text search index for name and description
+CelestialSchema.index({ name: "text", description: "text" });
+
+// Ensure name uniqueness
+CelestialSchema.index({ name: 1 }, { unique: true });
+
+module.exports = mongoose.model("CelestialBody", CelestialSchema);
