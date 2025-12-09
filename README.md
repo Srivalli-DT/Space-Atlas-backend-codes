@@ -2,10 +2,8 @@
 
 A full-stack web application for exploring celestial bodies in our Solar System. Built with React, Node.js, Express, and MongoDB.
 
-![Space Atlas](https://img.shields.io/badge/version-2.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-ISC-green.svg)
 
-## 📋 Table of Contents
+Table of Contents
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
